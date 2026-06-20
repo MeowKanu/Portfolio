@@ -1,0 +1,20 @@
+{
+  "name": "kanak-portfolio",
+  "version": "1.0.0",
+  "description": "Kanak's Cybersecurity & Tech Portfolio with Vercel Speed Insights",
+  "private": true,
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "serve": "python3 -m http.server 8000"
+  },
+  "dependencies": {
+    "@vercel/speed-insights": "^1.0.0"
+  },
+  "keywords": [
+    "portfolio",
+    "cybersecurity",
+    "speed-insights"
+  ],
+  "author": "Kanak",
+  "license": "MIT"
+}
