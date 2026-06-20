@@ -326,8 +326,21 @@
   }
   .cert-card:hover { border-color: var(--gold); }
   .cert-badge { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+  .cert-logo { width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0; object-fit: cover; margin-top: 2px; }
   .cert-name { font-family: var(--font-disp); font-weight: 600; font-size: .9rem; margin-bottom: .2rem; }
   .cert-issuer { font-size: .78rem; color: var(--muted); }
+  .cert-number { font-family: var(--font-mono); font-size: .72rem; color: var(--muted); margin-top: .35rem; }
+  .cert-verify {
+    display: inline-flex; align-items: center; gap: .3rem;
+    font-family: var(--font-disp); font-size: .72rem; font-weight: 600;
+    color: var(--cyan); text-decoration: none;
+    margin-top: .55rem;
+    border: 1px solid rgba(0,212,216,.3);
+    border-radius: 999px;
+    padding: .25rem .7rem;
+    transition: all .2s;
+  }
+  .cert-verify:hover { background: rgba(0,212,216,.1); border-color: var(--cyan); }
 
   /* ── Contact ── */
   .contact-wrap {
@@ -645,7 +658,7 @@
     <div>
       <div class="skill-group-title">🔒 Security &amp; Networking</div>
       <div class="skills-cloud">
-        <span class="skill-pill hot">Certified Ethical Hacker (CEH v13)</span>
+        <span class="skill-pill hot">CEH v13 (Course Completed)</span>
         <span class="skill-pill hot">Information Security Fundamentals</span>
         <span class="skill-pill hot">Cybersecurity Awareness</span>
         <span class="skill-pill hot">Networking Fundamentals</span>
@@ -692,13 +705,17 @@
       <div>
         <div class="cert-name">Certified Ethical Hacker v13 — Course Attendance</div>
         <div class="cert-issuer">EC-Council · Securium Academy</div>
+        <div class="cert-number">Certificate No. 733331</div>
+        <a href="https://aspen.eccouncil.org/VerifyEval" target="_blank" rel="noopener" class="cert-verify">✓ Verify Certificate</a>
       </div>
     </div>
     <div class="cert-card reveal">
-      <div class="cert-badge">🏅</div>
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAC/VBMVEUAAAD9//8UExX7/v75/P0WFhggHyL5/P0sKy//++YxMTUyMjX4+/vy9fb1+Pnh6u/v8vPu8fDr/v7d3+Ht7/Hs9/pKS1Jhj5xDUmHH0Neut73m6era+P28xcmv8PpVXWfq7e46P0k3NzzO0NO2uLvY2tx5hpB1e4Dh4+Woqq06SFZkcn71//9ffIzb399FQ0lYZ3WXnaHCxMdps7qClaPF9fxaW2BHcI5naW1ub3OQkpVRgZp81vlUVFqirLOa7PVkZGd+gIPO0NH81IaRprWOkI7lkUBvw8qVlpjO3uftqFuT2PmA3uJgoMJgr9B5wfd6sd7T1ti5urxTkbC75vmdn6Hxu3mq1/OfxNVhpO/jwpiUcFrEn3Xl2sW7f0VBQUirr7N4eX4cHBweHR7///8aGhoXFxgTEREWFBSO/PkiHyECa/wmIyaH+fWA9vAlICIFb/wiHBwdGRkDZvUaFBRTt94YGSEjjPYKdf0zLDFr5+ceh/cvKS0dFhYZg/hi0/MhGRgrJisrJCdl2PMPe/0nGxookvdTv/lMtvwgeuMeHidWvuJez/UriOdTueMUf/oliO8YffMtl/dv7eX//vFErvx38upo4eYXGSgznfgMcPQegvA4LzVQu/pbyvZBqfgVFBskJC4KU9c5o/pdyuYffukLXeFJs/wFYe1ZxOleze1Ms/RSue516vBq3fIzl+5Xxfg3NDoLaOx+7vIPRLhv5PAOPKrRUhFOs+gpKjS0Ow8/OT4dHy8rj+4sHx8gJjoyiN/CRBD6qi4tMDvmex4jLEY5HBpGKin6tEShNhNQHRgxN0TujiMXKmTcZhb/+dr/9cwVGjQNTMhw0dcQNpdJbnciSpATMoQZJlUVLnQpOVMneNf+46hAnOgiX7b1nSiNKBIpSX/7wF0lPWs/XnH+7LoWHkSORCNQptcXY9Rhn6usVCJ5Khg1Xo1lHhUkacQ2casqW6L93ZccS6T9zXNkMCIyTGxXOTQye8NDgrAWced1Qy5Dj83Pcil2WEsaQxVRAAAAYnRSTlMA/Ar59REa7jH+Pibo3uP42vr9r9P7/P799/bE/PX9+8z+VKCKpvj4u33++v779/3895j+9v1c/vlsdv7++/b8RGBi/vb4/v43+f78/Pv8/PWER/76X/718fv3/Pn3/XKzkJ65NjIAAA33SURBVHjavZt7jNTVFcdZFhBERYSooEKiNWJbH001lbaxTcEHSKJtbGJt/7r3nHt/Ozu7w84O+2DZFy7yKgIuuIogj6WCwQpKEFmLEW0DovYlbbWmRte2tMHEplXbSJv0nPt7P2d2eVxlZmfmN/fz+5577rnnPmbEiGGVsZedM6q6elT1qPMmjR094myUkRdCYrl65FmBTpcCUfA/KXO3uO9OPiPU0dWm8tkSkZmmSMmP/BpzV5iPR51u7GSutVp6SBtrF/sV4XOGfdVpxJoKbaE2R8aKw5anUzbX9TOlDDABGYIjqi/S5VWnCasUimShSbpVNzfLKWIvoDoshZVAfTiqVu5gp4AdY7BhuYE7EOmy1Vb66rC7NnWgqbbcoAdL28XKmVwR+YJht65W7Mouxe9I5j/zf5pwMjj3rmFgvwswxbGydNEiVKT7mKYbiTx2qNwq41ToBSjpglJKssXzQzY3+Fxbr8guaWEFh2hu7ruuXJtbjpxm9aGRAW51ucL2HlFxiYkeAhngQLDviqGVGHlipWQAEXQr4Y0+mAhCjH0UIU+ojMyhWThRw29atL7WF6oePa6yXj6pMNrJvOAmKiQD3KgwePMOt2bhwt7FmKBXLWnu6GhTItrf3EDCD1XlyTSuuFxz1279urevb2G9SrC0frCt4/HVN8QbwouxxsPKDNLn+/1IhMKG1du3MAmMqJsfX0tFYbKf2X9Qr/pCZmJFcQN9qBuzOObXkal/F6uc3lAPPr529dqGJOfzOoXkMWNkpqEtP1yJULOp3l4eMkL123+Xmlf/5EP7I6Wi9CA5i6vdYSHko/Y3HyFjoNK6S/mubuyj2pYg34QqtMxv6YqRnT9mpydEV3EDR/uvEWae6skaqrR95cpO5fpV/2PtbOy2Bk6ylZ7PBUUKGWB8hqGD9vH8tsRaZZ1FEjtXrlyw4Dr7MrV59+5+ugm1pmhe9hC2tva/mBLIMc3YbnYVLVZNPYtlsBBPrXxowYInbMlYenj33xjcbKc7LQZci2nB9NLkFHC8Z+hI8+q6+vp5iA11xLAV3+HYWv35HraRWpUz97F6fi2Bu9LDeLJk29DeUBTwZ6NYGMVY99SClXu0c4PK2qzY4VYVhCO5tnY+pg7XyZ59NVyvIkRPco2mx2K9ZRp85cVaOZ1OfRgCCytfuwRTwUbymDTPigyDduPVsMRivbnA6rSU3nMpmtT9AwLTIHGw4Hav59LGMOeCuOTL4EsqhvW8i0NH0TiXsB7Q6okXNinTgV7dpZSy9G7HOWywSnBRt/ni2V+yYKccqKG0vqtOuWD9gjYmVnoHgfVmS9kBDa0n6d2W2vnFNGPHJH8fpiqRmtXhZzVa19guZcBPaxMg9XqL9NKDsm5po1CC1t+Z29jYiOmOPTou2B65EzqUUAdqapxoanUSeJNluJssi7iaVN/T09OjyfOeRIt6cmOjSgNHHHsk9eFIyhFSrLTLRVKs5+1hn9JLNXF3cPur5p6Wlh8hmRpVbSOBixX25SoTO1JSO7S5tgkYvPcBFqmf0JbWyzT7EpYIbBnFaDU21m5Jd+1caKnEFSxlwowhoJdfdL71jMu19FLLMlN2pXs0tzGBiVzK6FMh9xoD16CTQSdd6ui1F3qszk6HS37Feq0uHrV0j7G+Ae9UWX05CAZImhP6IVMbpLp0HlVu2Xb+MXOXkiHU+uZmTci1Bvwcx5OdxSxwDs6JgGUGmPVO61v4VYXs1YarjF8J1d/W1q6sAx18OxuoR1sf7sRwBhzuJgFbj4YrMJCPJoRqk2fU9fXVUL3UwnoPS9X9xqS6uZ8aupkt0EMNrt6stVQ0+U6x9Tmg/JWG+D1SxORn3dtbz6GCwUs5M9D9dijr0NYNDzK3g7kr5vuOmDz7WOQlnOzTMtXSDhjr65SJGvsYrNjnNhvPUG36G4bbxp5m+VzbGROGKk8yN3EZMGXG9SY8630rqC03uWDJiY+yuaxXtWg/0XRyUkztUHArynJgUryV9f70jxY9Pm2DTSZlkVcr9WobN/uKz2Pc6Hwu0MhXg8jwaV9xnqTu/QXrdsHG5z57mD18uYmcG8JZWxxsAM866UDA0iIVTIoXWbreVIy+Yno8aDz8c3YAa0Mk3Q+D3aiYcxZGgk0sMsCLdZ0tyAdLSVMn7sx6OTemVZsgGGNzKde7CCxFBlg54OJejllG8UMumB5XmXeWm9jW6GPYqZLAzPDAWViqomYvmQQf6eXYtG8eeuBdRv0aG2yu3NAVnrtHmtiFuOA52WCS/BbPYCSFrQe2b9+LLng9m9o6aHQvN4DScxlNHAWPhlymb9GHqmYvgbsRP9u+ffs+5Stm8BohPDC278TQoknYuVzwRAO+MwBOWcWhcE3gPGknxXeQwRcY8A6TkRwUnql5VrOzPdTIIknxjSbxugoyXct8wOC6bjKI3s791YCVXmbiR1Cx0dyV1sYe5Fk4l8AXBrpxluK6RRyYOzXHL1vxLpMYrDEJyHIvXpW2pQUQD9IaAacumFFXpllTK7c2gzEILq2RrqntXQm9TaSsjnnyWuF7Zr1FyXJgRYprXmTFz2iue4HXnUTTKuPV73rhQW8LpueJtm6F75htBytTsXuj+Qa+wl57aLDzPgYUlVmlRX/9vhjKGONg6YDLKY4uTqatiztLRNGKMGGHzAVbZSxd8faLqEiBEBsNeAakp1tChteg/V2C2L6Lv1uRvpztXvyi8eproSF1eViKwJZLdGVNOivjiUu7MkvxdLP+MwYKaRYyVSM6tZgUyr3IG//MFUqFJsWoktkuZQrYE7abRHKoNm8oOOKsC8D75LEwy8jTvOSJfhJFRQo3OOPLkDiX8DaGYsNi0v4Og3P5Qjda8D6KorUYiyvaQcOWXJ7ezxdy9K2ShpOUhhTyBM/nu/FdEIUEzYEdkiywdCe0R4yiEzYYBngL7VPNb710zChlMvwbzVWS3xr8j9kJlcncYCKAMjIuSuEtDxB4C+xH+EQzWMGABdbNpPhoO+w/BhJhiWDwSbLI6xfD+zBLLpEfA71S/jaKjDiXB1bROOB3GkINPgoDCLMITC4Eh7CavkCmLsH+PwA2wUu8FGXAbx/YuASOyAbxMSjLjYcBe7uv886q+WSIbV8E8nsCN8EhwYp/eN1tL7Gpr7lNELjdgAUspqqKcJx0rLsEGr5Jose9B3SHW0RIjAwGrpnO7Pj1jPgkYFDCIQmzLG64w3DoN/ys2cgEljk4TBcxWC4B+GVOdsD98j1qPMBIQBWBnSh/CpMVjN3u50QJgNn2ZCscXDxDieyQLkUQ7E/a0nYJ/dLwg1FzcAghXEaOFgQmbdXBqUTYtxIrQlHmjELExiJgD3pe5C2/jIXpGO7JgQHV+7L3WWzv0u15sVggIyuFtpsFFkF8W7tBWcqkLY3IZEQmR2M/uoucSAhKIXAgCcFNJhyFZta75spQkm5X/a0BZ6A3TmeSWarmt/T118CO1eMOy2gWQr24KrBWbaG/t7/sn1JePvDYIPwDtsqL4NMPquCxuXSfWykcDuLD8IZYCq9xojVtAAX1odw7dKMw5xP4k8nQhQVNCu4Gee8lcPlJEG9WFaAq5wewCcEFXC948e3tALi/iwI47P8rbFt3GD4A0X9k09yN8Dy0QxPIOe+sW8TzPJy2nzz05Mev3NdOH7QrKG34HxtOcdwq3Xz8rr/k4HhV970fwfTdP/cjcWhNkU/yeN112aCQBFZwtASbJ15x0+/Xyf4jF028furz6xDehhWLn5w4+xppwAphytRXYC6UOFZZ225HswFAitXdJ+6isPPasV+RNe6bfcg0iZ1TB7efxsJEDyzWUyM1D375I3p6gw8N/Wuc7B88ADDueboZPmPBbx6jIXcawDoyz356OY7uHJq23U5jKI16TQhq14n7Bggs4NeSrjkEHzmWjmz1RfxaIu/uH3Uihv0Y6kM5SQG+iEU7++FVGdO9xdsnAu7uZp5ODdJ2rfBK+YXQEEoRTUg9mhElViSHxeNlTiDRRHFmdGtgSGFwOEXEXMte3ZNnAYyzYVJ8+wfLjStnQjBLLghxpgVPSDrldYYls+BC4ubiZXC9CPu1lDLLCGlTq9BZq9BRAYArUw6eBOcqsclSmeNN0Rlb4G/nuTVlA3kk+NO34HG1IZ638Y4buUmFu8kmUk8JVMMtCTNeOUSwDNogMNpSwn9++uEEKUIZjBi66Ki1PcEbM45FjInGLzHc4tray134BF/2Edugow6XGUzC/Aa+Mvuoz1dElmIM7zWgwAqE29yqcoeMcqE0NcpFb3fFTu8RMWOT3NWrbqvkeFPg0Gnylp+b4CXtdCSeNFMbKzjQNTJEjknGQNKIlTU6YmtFR9jGhjpVRLSzJZ99BCG6GbuxwmO4d0JkbI5qtlt4KNwxlZ0WJHJOZKGTN7JSThK+PoRjx+MBujPI3jZHOTpfMSV6HKGcb0+MLxMksMu5Mw75xDF9ITwdTa46G6sKwzjpTF8pRCfCFYdMR+6iYZ2ln0HmxiBaJB5dSF7AZLl86vbKYf0CxYiOT//T4GEsR43hHCg35TynpUXWynh8mZq5PMeacWq/kpggsMzPFcKr8i4WRpxS+TbVMBWdSWZGShnCVg3n8HysTGLVMnDOO8HgwT0X7kLw9dPyYxhGQz4YL4K84E4PykV87czT9vOfc81SeD4rZvCSQqu5bMyI01ouMJXeVEhgG1vkp5gLJp2JH3lNdn5CNrWQk/7Kk8x1T3U+mDHijJWxoyCljBp/Fn7Kd20If97M4fzM5/9xAxDKQrWesgAAAABJRU5ErkJggg==" alt="InLighnX Global logo" class="cert-logo">
       <div>
         <div class="cert-name">Offensive Cyber Security Internship</div>
         <div class="cert-issuer">InLighnX Global</div>
+        <div class="cert-number">Intern ID: ITID5348</div>
+        <a href="https://www.inlighnxglobal.com/verify-certificate/" target="_blank" rel="noopener" class="cert-verify">✓ Verify Certificate</a>
       </div>
     </div>
     <div class="cert-card reveal">
@@ -741,6 +758,10 @@
         <a href="https://github.com/MeowKanu" target="_blank" rel="noopener" class="contact-link">
           <span class="cl-icon">🐱</span>
           github.com/MeowKanu
+        </a>
+        <a href="https://orcid.org/0009-0003-3540-4785" target="_blank" rel="noopener" class="contact-link">
+          <span class="cl-icon">🆔</span>
+          ORCID: 0009-0003-3540-4785
         </a>
         <a class="contact-link">
           <span class="cl-icon">📍</span>
